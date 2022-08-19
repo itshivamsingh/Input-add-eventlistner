@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> PROJECT </h1>
+    <input type="text" name="input" id="ipt">
+<p id="demo"> HII </p>
+<button type ="button">
+Click Me! </button>
+
+<script>
+    let value = "";
+    document.getElementById('ipt').addEventListener('change',(e)=>{
+        value = e.target.value;
+    })
+    document.getElementsByTagName('button')[0].addEventListener('click',(e)=>{
+        if(value.length>1){
+            document.getElementById('demo').innerText = value;
+            document.getElementsByTagName('h1')[0].innerText = value;
+
+        }else{
+            document.getElementById('demo').innerText = "No VALUe";
+        }
+    })
+</script>
+</body>
+</html>
